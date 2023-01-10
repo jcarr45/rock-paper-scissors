@@ -4,7 +4,7 @@ let random =  Math.floor((Math.random() * computerChoices.length)); //multiplies
 let computerSelection = computerChoices[random]; //uses whole number form previous line (1, 2 or 3) to pick string from array with corresponding position
 return computerSelection
 }
-
+ 
 
 
 
