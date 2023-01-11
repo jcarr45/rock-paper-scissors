@@ -18,12 +18,13 @@ function playRound (playerSelection, computerSelection) {
         } else if (playerSelection === "paper" && computerSelection === "rock") {
             return "You win, paper beats rock!"
         } else if (playerSelection === "paper" && computerSelection === "scissors") {
-            return "You lose, scissors beat paper"
+            return "You lose, scissors beat paper!"
         } else if (playerSelection === "scissors" && computerSelection === "rock") {
             return "You lose, rock beats scissors"
         } else if (playerSelection === "scissors" && computerSelection === "paper") {
             return "You win, scissors beat paper!"
     }}
 
-const playerSelection = "rock";
+const playerChoice = "PAPER";
+const playerSelection = playerChoice.toLowerCase();
 console.log(playRound(playerSelection, computerSelection));
