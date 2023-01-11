@@ -2,28 +2,28 @@ function getComputerChoice() {
 let computerChoices = ["rock", "paper", "scissors"];
 let random =  Math.floor((Math.random() * computerChoices.length)); //multiplies random decimal b/t 0 and 1 by array length (3), then rounds down to whole number
 let computerSelection = computerChoices[random]; //uses whole number form previous line (1, 2 or 3) to pick string from array with corresponding position
-return computerSelection.toLowerCase
+return computerSelection
 }
  
+let computerSelection = getComputerChoice()
 
-
-
-function game (playerSelection, computerSelection) {
+function playRound (playerSelection, computerSelection) {
 
         if (playerSelection === computerSelection) {
             return "That's a tie!"
         } else if (playerSelection === "rock" && computerSelection === "paper") {
-            return "You lose"
+            return "You lose, paper beats rock!"
         } else if (playerSelection === "rock" && computerSelection === "scissors") {
-            return "You win!"
+            return "You win, rock beats scissors!"
         } else if (playerSelection === "paper" && computerSelection === "rock") {
-            return "You win!"
+            return "You win, paper beats rock!"
         } else if (playerSelection === "paper" && computerSelection === "scissors") {
-            return "You lose"
+            return "You lose, scissors beat paper"
         } else if (playerSelection === "scissors" && computerSelection === "rock") {
-            return "You lose"
+            return "You lose, rock beats scissors"
         } else if (playerSelection === "scissors" && computerSelection === "paper") {
-            return "You win!"
+            return "You win, scissors beat paper!"
     }}
 
-let computerSelection = getComputerChoice()
+const playerSelection = "rock";
+console.log(playRound(playerSelection, computerSelection));
