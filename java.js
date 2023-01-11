@@ -2,7 +2,7 @@ function getComputerChoice() {
 let computerChoices = ["rock", "paper", "scissors"];
 let random =  Math.floor((Math.random() * computerChoices.length)); //multiplies random decimal b/t 0 and 1 by array length (3), then rounds down to whole number
 let computerSelection = computerChoices[random]; //uses whole number form previous line (1, 2 or 3) to pick string from array with corresponding position
-return computerSelection
+return computerSelection.toLowerCase
 }
  
 
